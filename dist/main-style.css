@@ -55,27 +55,35 @@ header a {
 .hero img {
   width: 100%;
   opacity: 0.9;
+  position: relative;
 }
 
 .hero .text-background {
+  display: grid;
   position: absolute;
-  height: auto;
-  width: 150px;
-  background: rgba(135, 207, 235, 0.199);
-  top: 50px;
+  max-width:30%;
+  max-height: auto;
+  top: 20px;
   right: 50px;
-  color: black;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "p"
+                       "s"
+                       "b" ;
 }
 
 .text-background p {
   font-weight: 900;
-  font-size: 30px;
+  font-size: auto;
   line-height: 1em;
+  grid-area: p;
 }
 
 .text-background small {
   font-weight: bold;
-  color: white;
+  color: black;
+  grid-area: s;
+  color: black;
 }
 
 .hero-button {
@@ -85,6 +93,7 @@ header a {
   color: orangered;
   background-color: var(--botox);
   font-weight: bold;
+  grid-area: b;
 }
 
 .hero-button:hover {
@@ -311,9 +320,7 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) {
-  .hero img {
-    height: 600px;
-  }
+
   .wrapper {
     width: 60%;
     margin-left: auto;
@@ -321,6 +328,15 @@ footer {
   }
   header {
     width: 100% !important;
+  }
+  .hero img {
+    width: 100%;
+    opacity: 0.9;
+    height: 600px;
+  }
+  
+  .hero .text-background {
+    background: transparent;
   }
 
   .why-us {
@@ -360,14 +376,9 @@ footer {
   }
 
   .hero-button {
-    width: 100%;
-    height: 30px;
-    margin-top: 1em;
-    color: orangered;
-    background-color: var(--botox);
-    font-weight: bold;
     position: absolute;
-    top: 255px;
+    top: 300px;
+    
   }
   header {
     display: flex;
