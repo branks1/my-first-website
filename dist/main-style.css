@@ -59,7 +59,7 @@ header a {
 
 .hero .text-background {
   position: absolute;
-  height: 250px;
+  height: auto;
   width: 150px;
   background: rgba(135, 207, 235, 0.199);
   top: 50px;
@@ -381,4 +381,16 @@ footer {
   .footer-text {
     color: red;
   }
+}
+@media only screen and (max-width:400px) {
+ .hero .text-background{
+   height: 200px;
+ }
+ .text-background p{
+   font-size: 20px;
+ }
+ .text-background small{
+   color: black;
+ }
+
 }
