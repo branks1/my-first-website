@@ -1,0 +1,23 @@
+{
+  "name": "my-first-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d my-first-website"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/branks1/my-first-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/branks1/my-first-website/issues"
+  },
+  "homepage": "https://branks1.github.io/my-first-website/",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
